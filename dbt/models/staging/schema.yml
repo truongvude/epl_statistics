@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: staging
+    database: deproject36
+    schema: epl_dataset
+
+    tables:
+      - name: epl_external_table
