@@ -1,3 +1,6 @@
-*.json
+**google_credentials.json
 .terraform*
 terraform.*
+**logs
+**.env
+**__pycache__/
