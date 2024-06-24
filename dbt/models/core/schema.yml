@@ -1,0 +1,98 @@
+
+version: 2
+
+models:
+  - name: epl_statistics
+    description: "List of matches and their information"
+    columns:
+      - name: match_date
+        data_type: date
+        description: Date of matches"
+
+      - name: match_time
+        data_type: time
+        description: "Time of matches"
+
+      - name: hometeam
+        data_type: string
+        description: "The host team the team playing at their own home field or home gym or home court or home state in front of their fans cheering them on"
+
+      - name: awayteam
+        data_type: string
+        description: "A team playing away from its home ground."
+
+      - name: fthg
+        data_type: int64
+        description: "Full Time Home Team Goals"
+
+      - name: ftag
+        data_type: int64
+        description: "Full Time Away Team Goals"
+
+      - name: ftr
+        data_type: string
+        description: "Full Time Result (H=Home Win, D=Draw, A=Away Win)"
+
+      - name: hthg
+        data_type: int64
+        description: "Half Time Home Team Goal"
+
+      - name: htag
+        data_type: int64
+        description: "Half Time Away Team Goals"
+
+      - name: htr
+        data_type: string
+        description: "Half Time Result (H=Home Win, D=Draw, A=Away Win)"
+
+      - name: referee
+        data_type: string
+        description: "Match Referee"
+
+      - name: hs
+        data_type: int64
+        description: "Home Team Shots"
+
+      - name: as
+        data_type: int64
+        description: "Away Team Shots"
+
+      - name: hst
+        data_type: int64
+        description: "Home Team Shots on Target"
+
+      - name: ast
+        data_type: int64
+        description: "Away Team Shots on Target"
+
+      - name: hf
+        data_type: int64
+        description: "Home Team Fouls Committed"
+
+      - name: af
+        data_type: int64
+        description: "Away Team Fouls Committed"
+
+      - name: hc
+        data_type: int64
+        description: "Home Team Corners"
+
+      - name: ac
+        data_type: int64
+        description: "Away Team Corners"
+
+      - name: hy
+        data_type: int64
+        description: "Home Team Yellow Cards"
+
+      - name: ay
+        data_type: int64
+        description: "Away Team Yellow Cards"
+
+      - name: hr
+        data_type: int64
+        description: "Home Team Red Cards"
+
+      - name: ar
+        data_type: int64
+        description: "Away Team Red Cards"
