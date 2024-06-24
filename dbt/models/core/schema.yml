@@ -1,15 +1,8 @@
+
 version: 2
 
-sources:
-  - name: staging
-    database: deproject36
-    schema: epl_dataset
-
-    tables:
-      - name: epl_external_table
-
 models:
-  - name: stg_epl_statistics
+  - name: epl_statistics
     description: "List of matches and their information"
     columns:
       - name: match_date
@@ -103,4 +96,3 @@ models:
       - name: ar
         data_type: int64
         description: "Away Team Red Cards"
-
