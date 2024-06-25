@@ -39,7 +39,7 @@ This project is part of the [Data Engineering Zoomcamp](https://github.com/DataT
     * [Setup GCP](terraform/README.md) for the first time.
     * Move to terraform folder. Update variables `credentials`, `gcs_bucket_name`, `bq_dataset_name` in `variables.tf` file to your desired.
     * Run this command to execute terraform
-    ```
+    ```bash
     # Login to Gcloud CLI
     gcloud auth application-default login
     # Initialize state file (.tfstate)
@@ -73,3 +73,26 @@ This project is part of the [Data Engineering Zoomcamp](https://github.com/DataT
     docker compose down
     ```
     * Check your external table in BigQuery.
+
+4. Dbt
+    * [Setup](dbt/README.md) your dbt account and project.
+    * Go to Develop -> Cloud IDE.
+    * Copy code from [this](./dbt/) folder.
+    * Run `dbt build` to execute.
+    * Check your dataset in BigQuery.
+
+5. Looker Studio
+
+    In this step you need to connect to connect table in BigQuery with your Looker Studio
+    * Go to Looker Studio: [https://lookerstudio.google.com/](https://lookerstudio.google.com/).
+    * Create a blank report -> Select **BigQuery** in Google Connector. Select your project, dataset and table.
+    * Create your dashboard.
+## Dashboard
+* Link dashboard: 
+[EPL Statistics](https://lookerstudio.google.com/reporting/d10255ec-a678-45e7-8dc8-4358846d88b9)
+
+![](images/red_cards.png)
+
+![](images/win_rate.png)
+
+![](images/Corner.png)
