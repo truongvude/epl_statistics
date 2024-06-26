@@ -5,6 +5,14 @@ Project for the DataTalksClub/Data Engineering Zoomcamp
 
 This project is part of the [Data Engineering Zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp/), a course organization by [DataTalksClub](https://github.com/DataTalksClub/) .The goal of this project is to apply everything we have learned in this course to build an end-to-end data pipeline.
 
+### Problem
+
+* This project uses data from English Premier League matches over the past 10 seasons (2014/2015-2023/2024). This data is taken from the website https://www.football-data.co.uk/ . The goal of this project is to create a dashboard to search for potential football teams (so bettors can confidently bet on their favorite team), helping to minimize risks before placing a bet money goes to bookie. Because each season there will be players transferred, it is impossible to know their mutations, so all data are for reference only. Think carefully before placing a bet.
+
+    #### Disclaimed
+
+    * Betting in some countries is illegal and can result in criminal prosecution. I don't support online betting. Any attempt to claim compensation or blame for reliance on this dashboard is unacceptable.
+
 ## Dataflow diagram
 
 ![](https://github.com/truongvude/epl_statistics/blob/main/images/dataflow.gif)
@@ -54,7 +62,7 @@ This project is part of the [Data Engineering Zoomcamp](https://github.com/DataT
     
 3. Airflow + Bigquery
     * [Setup Airflow](airflow/README.md) with Docker 
-    * Change GCP_PROJECT_ID & GCP_GCS_BUCKET in [`docker-compose.yaml`](airflow/docker-compose.yaml), BIGQUERY_DATASET in [data_ingestion_gcs_dag.py](airflow/dags/data_ingestion_gcs_dag.py) as your config.
+    * Change GCP_PROJECT_ID & GCP_GCS_BUCKET in [`docker-compose.yaml`](airflow/docker-compose.yaml), BIGQUERY_DATASET in [`data_ingestion_gcs_dag.py`](airflow/dags/data_ingestion_gcs_dag.py) as your config.
     * Run this command
     ```bash
     # Move to airflow folder
@@ -66,7 +74,7 @@ This project is part of the [Data Engineering Zoomcamp](https://github.com/DataT
     # Kick up the all the services from the container:
     docker compose up
     ```
-    * Login to Airflow web UI on localhost:8080 with default creds (username/password): airflow/airflow
+    * Login to Airflow web UI on [localhost:8080](http://localhost:8080/) with default creds (username/password): airflow/airflow
     * Run DAG on the Web Console.
     On finishing your run or to shut down the container/s:
     ```bash
